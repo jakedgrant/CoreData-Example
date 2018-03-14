@@ -13,13 +13,13 @@ import CoreData
 
 extension GitAuthor {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<GitAuthor> {
+    @nonobjc public class func createFetchRequest() -> NSFetchRequest<GitAuthor> {
         return NSFetchRequest<GitAuthor>(entityName: "GitAuthor")
     }
 
-    @NSManaged public var email: String?
-    @NSManaged public var name: String?
-    @NSManaged public var commits: NSSet?
+    @NSManaged public var email: String
+    @NSManaged public var name: String
+    @NSManaged public var commits: NSSet
 
 }
 

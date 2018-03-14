@@ -7,13 +7,26 @@
 //
 
 import UIKit
+import WebKit
 
 class DetailViewController: UIViewController {
+    var detailItem: Commit?
+
+    @IBOutlet var detailLabel: UILabel!
+    @IBOutlet var webView: WKWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let detail = self.detailItem {
+            detailLabel.text = detail.message
+            
+            if let url = URL(string: detail.url) {
+                webView.load(URLRequest(url: url))
+                webView.allowsBackForwardNavigationGestures = true
+            }
+            // navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Commit 1/\(detail.author.commits.count)", style: .plain, target: self, action: #selector(showAuthorCommits))
+        }
     }
 
     override func didReceiveMemoryWarning() {

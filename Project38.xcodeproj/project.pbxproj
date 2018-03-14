@@ -12,6 +12,13 @@
 		237912DC20522A8700C9F871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237912DA20522A8700C9F871 /* Main.storyboard */; };
 		237912DE20522A8700C9F871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237912DD20522A8700C9F871 /* Assets.xcassets */; };
 		237912E120522A8700C9F871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 237912DF20522A8700C9F871 /* LaunchScreen.storyboard */; };
+		237912E920522ABA00C9F871 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237912E820522ABA00C9F871 /* SwiftyJSON.swift */; };
+		237912EB20522C3B00C9F871 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237912EA20522C3B00C9F871 /* DetailViewController.swift */; };
+		237912EE20522CE600C9F871 /* Project38.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 237912EC20522CE600C9F871 /* Project38.xcdatamodeld */; };
+		237B6DFA2054D9000026DC90 /* Commit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B6DF62054D9000026DC90 /* Commit+CoreDataClass.swift */; };
+		237B6DFB2054D9000026DC90 /* Commit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B6DF72054D9000026DC90 /* Commit+CoreDataProperties.swift */; };
+		237B6DFC2054D9000026DC90 /* GitAuthor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B6DF82054D9000026DC90 /* GitAuthor+CoreDataClass.swift */; };
+		237B6DFD2054D9000026DC90 /* GitAuthor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B6DF92054D9000026DC90 /* GitAuthor+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		237912DD20522A8700C9F871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		237912E020522A8700C9F871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		237912E220522A8700C9F871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		237912E820522ABA00C9F871 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		237912EA20522C3B00C9F871 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		237912ED20522CE600C9F871 /* Project38.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project38.xcdatamodel; sourceTree = "<group>"; };
+		237B6DF62054D9000026DC90 /* Commit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Commit+CoreDataClass.swift"; sourceTree = "<group>"; };
+		237B6DF72054D9000026DC90 /* Commit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Commit+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		237B6DF82054D9000026DC90 /* GitAuthor+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitAuthor+CoreDataClass.swift"; sourceTree = "<group>"; };
+		237B6DF92054D9000026DC90 /* GitAuthor+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitAuthor+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +68,18 @@
 		237912D520522A8700C9F871 /* Project38 */ = {
 			isa = PBXGroup;
 			children = (
+				237B6DF62054D9000026DC90 /* Commit+CoreDataClass.swift */,
+				237B6DF72054D9000026DC90 /* Commit+CoreDataProperties.swift */,
+				237B6DF82054D9000026DC90 /* GitAuthor+CoreDataClass.swift */,
+				237B6DF92054D9000026DC90 /* GitAuthor+CoreDataProperties.swift */,
 				237912D620522A8700C9F871 /* AppDelegate.swift */,
 				237912D820522A8700C9F871 /* ViewController.swift */,
-				237912DA20522A8700C9F871 /* Main.storyboard */,
+				237912EA20522C3B00C9F871 /* DetailViewController.swift */,
+				237912E820522ABA00C9F871 /* SwiftyJSON.swift */,
 				237912DD20522A8700C9F871 /* Assets.xcassets */,
+				237912DA20522A8700C9F871 /* Main.storyboard */,
 				237912DF20522A8700C9F871 /* LaunchScreen.storyboard */,
+				237912EC20522CE600C9F871 /* Project38.xcdatamodeld */,
 				237912E220522A8700C9F871 /* Info.plist */,
 			);
 			path = Project38;
@@ -136,8 +157,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				237B6DFA2054D9000026DC90 /* Commit+CoreDataClass.swift in Sources */,
+				237912E920522ABA00C9F871 /* SwiftyJSON.swift in Sources */,
+				237B6DFD2054D9000026DC90 /* GitAuthor+CoreDataProperties.swift in Sources */,
+				237B6DFB2054D9000026DC90 /* Commit+CoreDataProperties.swift in Sources */,
+				237B6DFC2054D9000026DC90 /* GitAuthor+CoreDataClass.swift in Sources */,
+				237912EE20522CE600C9F871 /* Project38.xcdatamodeld in Sources */,
 				237912D920522A8700C9F871 /* ViewController.swift in Sources */,
 				237912D720522A8700C9F871 /* AppDelegate.swift in Sources */,
+				237912EB20522C3B00C9F871 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +350,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		237912EC20522CE600C9F871 /* Project38.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				237912ED20522CE600C9F871 /* Project38.xcdatamodel */,
+			);
+			currentVersion = 237912ED20522CE600C9F871 /* Project38.xcdatamodel */;
+			path = Project38.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 237912CB20522A8700C9F871 /* Project object */;
 }
