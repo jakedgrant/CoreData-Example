@@ -25,24 +25,20 @@ class DetailViewController: UIViewController {
                 webView.load(URLRequest(url: url))
                 webView.allowsBackForwardNavigationGestures = true
             }
-            // navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Commit 1/\(detail.author.commits.count)", style: .plain, target: self, action: #selector(showAuthorCommits))
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Commit 1/\(detail.author.commits.count)", style: .plain, target: self, action: #selector(showAuthorCommits))
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    @objc func showAuthorCommits() {
+        if let detail = self.detailItem {
+            let author = detail.author
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+            let vc = AuthorTableViewController.init(style: .plain) 
+            vc.gitAuthor = author
+            navigationController?.pushViewController(vc, animated: true)
+            
+            
+        }
     }
-    */
 
 }
