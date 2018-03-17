@@ -161,7 +161,6 @@ class ViewController: UITableViewController, NSFetchedResultsControllerDelegate 
         }
     }
     
-    
     func saveNewestCommitDate() {
         let formatter = ISO8601DateFormatter()
         let newestCommitFromCoreData = getNewestCommitDateFromCoreData()
@@ -195,8 +194,7 @@ class ViewController: UITableViewController, NSFetchedResultsControllerDelegate 
         let authorRequest = GitAuthor.createFetchRequest()
         authorRequest.predicate = NSPredicate(format: "name == %@", json["commit"]["committer"]["name"].stringValue)
         
-        if let authors = try?
-            container.viewContext.fetch(authorRequest) {
+        if let authors = try? container.viewContext.fetch(authorRequest) {
             if authors.count > 0 {
                 // we already have this author
                 commitAuthor = authors[0]

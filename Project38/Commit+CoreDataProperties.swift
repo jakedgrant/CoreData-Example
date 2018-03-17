@@ -2,7 +2,7 @@
 //  Commit+CoreDataProperties.swift
 //  Project38
 //
-//  Created by Jake Grant on 3/10/18.
+//  Created by Jake Grant on 3/13/18.
 //  Copyright © 2018 Jake Grant. All rights reserved.
 //
 //

@@ -15,7 +15,7 @@
     <entity name="GitAuthor" representedClassName="GitAuthor" syncable="YES">
         <attribute name="email" attributeType="String" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
-        <relationship name="commits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Commit" inverseName="author" inverseEntity="Commit" syncable="YES"/>
+        <relationship name="commits" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Commit" inverseName="author" inverseEntity="Commit" syncable="YES"/>
         <fetchIndex name="byNameIndex">
             <fetchIndexElement property="name" type="Binary" order="ascending"/>
         </fetchIndex>

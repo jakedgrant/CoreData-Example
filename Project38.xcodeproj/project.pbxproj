@@ -19,6 +19,7 @@
 		237B6DFB2054D9000026DC90 /* Commit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B6DF72054D9000026DC90 /* Commit+CoreDataProperties.swift */; };
 		237B6DFC2054D9000026DC90 /* GitAuthor+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B6DF82054D9000026DC90 /* GitAuthor+CoreDataClass.swift */; };
 		237B6DFD2054D9000026DC90 /* GitAuthor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B6DF92054D9000026DC90 /* GitAuthor+CoreDataProperties.swift */; };
+		237B6E3F2058C8B90026DC90 /* AuthorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B6E3E2058C8B90026DC90 /* AuthorTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		237B6DF72054D9000026DC90 /* Commit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Commit+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		237B6DF82054D9000026DC90 /* GitAuthor+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitAuthor+CoreDataClass.swift"; sourceTree = "<group>"; };
 		237B6DF92054D9000026DC90 /* GitAuthor+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GitAuthor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		237B6E3E2058C8B90026DC90 /* AuthorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				237B6DF92054D9000026DC90 /* GitAuthor+CoreDataProperties.swift */,
 				237912D620522A8700C9F871 /* AppDelegate.swift */,
 				237912D820522A8700C9F871 /* ViewController.swift */,
+				237B6E3E2058C8B90026DC90 /* AuthorTableViewController.swift */,
 				237912EA20522C3B00C9F871 /* DetailViewController.swift */,
 				237912E820522ABA00C9F871 /* SwiftyJSON.swift */,
 				237912DD20522A8700C9F871 /* Assets.xcassets */,
@@ -159,6 +162,7 @@
 			files = (
 				237B6DFA2054D9000026DC90 /* Commit+CoreDataClass.swift in Sources */,
 				237912E920522ABA00C9F871 /* SwiftyJSON.swift in Sources */,
+				237B6E3F2058C8B90026DC90 /* AuthorTableViewController.swift in Sources */,
 				237B6DFD2054D9000026DC90 /* GitAuthor+CoreDataProperties.swift in Sources */,
 				237B6DFB2054D9000026DC90 /* Commit+CoreDataProperties.swift in Sources */,
 				237B6DFC2054D9000026DC90 /* GitAuthor+CoreDataClass.swift in Sources */,
