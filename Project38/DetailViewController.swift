@@ -28,6 +28,11 @@ class DetailViewController: UIViewController {
             navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Commit 1/\(detail.author.commits.count)", style: .plain, target: self, action: #selector(showAuthorCommits))
         }
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+    }
 
     @objc func showAuthorCommits() {
         if let detail = self.detailItem {

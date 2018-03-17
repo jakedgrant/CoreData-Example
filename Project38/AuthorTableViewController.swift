@@ -11,25 +11,14 @@ import CoreData
 
 class AuthorTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     var gitAuthor: GitAuthor?
-    var container: NSPersistentContainer!
-    var commits = [Commit]()
-    var commitPredicate: NSPredicate?
-    var fetchedResultsController: NSFetchedResultsController<GitAuthor>!
+    var commits: NSOrderedSet = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         if let gitAuthor = self.gitAuthor {
             title = gitAuthor.name
-        }
-        
-        container = NSPersistentContainer(name: "Project38")
-        container.loadPersistentStores { storeDescription, error in
-            self.container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
-            
-            if let error = error {
-                print("Unresolved \(error)")
-            }
+            commits = gitAuthor.commits
         }
         
         self.isEditing = false
@@ -37,31 +26,29 @@ class AuthorTableViewController: UITableViewController, NSFetchedResultsControll
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return gitAuthor?.commits.count ?? 0
+        return commits.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        var cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell = UITableViewCell.init(style: .subtitle, reuseIdentifier: "Cell")
+        cell.selectionStyle = .none
 
-        if let commit = gitAuthor?.commits.object(at: indexPath.row) as? Commit {
+        if let commit = commits.object(at: indexPath.row) as? Commit {
             cell.textLabel?.text = commit.message
+            cell.textLabel?.numberOfLines = 0
+            cell.detailTextLabel?.text = commit.date.description
         }
         
         return cell
     }
+    
 }
